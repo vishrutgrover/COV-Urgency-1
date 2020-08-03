@@ -5,7 +5,8 @@ const orderModel = new mongoose.Schema({
     item: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Item"
-    }
+    },
+    address: String
 })
 
 const Order = mongoose.model('Order', orderModel)

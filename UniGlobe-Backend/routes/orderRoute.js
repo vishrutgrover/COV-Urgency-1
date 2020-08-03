@@ -13,7 +13,8 @@ router.post('/', async (req, res) => {
     for (let i=0; i<orders.length; i++){
         let order = new Order({
             date: Date.now(),
-            item: orders[i]
+            item: orders[i],
+            address: req.body.address
         })
         user.orders.push(order._id)
         await order.save()
